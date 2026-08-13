@@ -48,11 +48,11 @@ Look to the examples to see actual code examples and output.
 
 > #### **Requirements**
 > 
-> - A C23-compliant compiler (gcc 14+, clang 18+, for example; MSVC doesn't yet fully support C23)
-> - POSIX thread support if multithreading; otherwise, disable with the `-n` flag
+> - A C23-compliant compiler (gcc 14+, clang 18+; MSVC doesn't yet fully support C23, but i think it will work)
+> - POSIX thread support, if multithreading; otherwise, compile with `-DNTHREAD`.
 > - git
-> - POSIX-compliant shell script interpreter to compile (the compilation is relatively simple, and can probably be
-done in ~1 command if this is missing)
+> - bash, if running the example script. (the example script is relatively simple, and can probably be done in ~1
+command if this is missing)
 > - Samply, if profiling
 
 ## **Example Usage**

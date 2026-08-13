@@ -59,6 +59,8 @@ done in ~1 command if this is missing)
 Run
 
 ```bash
+git clone https://github.com/chostmadsen/perfhash-fnv1a.git
+cd perfhash-fnv1a
 ./perfhash-examples.sh
 ```
 

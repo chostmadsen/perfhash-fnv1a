@@ -6,6 +6,8 @@ the number of items to hash and $o$ is the given offset.
 Hash search is multithreaded if enabled, utilizing all CPU cores. The final offset will be whichever offset is found
 first, and may not necessarily be deterministic.
 
+------------------------------------------------------------------------------------------------------------------------
+
 ## **Usage**
 
 The algorithm will output the following message during hashing, where `name` is the hash table name, `items` is the
@@ -55,6 +57,8 @@ Look to the examples to see actual code examples and output.
 command if this is missing)
 > - Samply, if profiling
 
+------------------------------------------------------------------------------------------------------------------------
+
 ## **Example Usage**
 Run
 
@@ -68,3 +72,9 @@ To rehash the example items, and see what compilation calls should look like.
 
 To disable threading, add the `-n` flag. To profile, the `-p` flag (requires samply). To debug, the `-d` flag
 (requires LLVM).
+
+------------------------------------------------------------------------------------------------------------------------
+
+## **License**
+This repository is under the [MIT License](https://opensource.org/license/mit). See
+[LICENSE](https://github.com/chostmadsen/perfhash-fnv1a/blob/main/LICENSE) for more information.

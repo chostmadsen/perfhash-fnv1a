@@ -71,7 +71,7 @@ cd perfhash-fnv1a
 To rehash the example items, and see what compilation calls should look like.
 
 To disable threading, add the `-n` flag. To profile, the `-p` flag (requires samply). To debug, the `-d` flag
-(requires LLVM).
+(requires LLVM). Pass in the `-h` flag to view more specific arguments in the example shell script.
 
 ------------------------------------------------------------------------------------------------------------------------
 

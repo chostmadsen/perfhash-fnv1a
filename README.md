@@ -4,7 +4,8 @@ Generates perfect hashes with a modified FNV-1a 64-bit hash in $2^{\lceil \lg (n
 the number of items to hash and $o$ is the given offset.
 
 Hash search is multithreaded if enabled, utilizing all CPU cores. The final offset will be whichever offset is found
-first, and may not necessarily be deterministic.
+first, and may not necessarily be deterministic. The offset it is found with will be logged in the comment at the top
+of the emitted file, so it can be reproduced by disabling multithreading and starting with that offset.
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -50,16 +51,17 @@ Look to the examples to see actual code examples and output.
 
 > #### **Requirements**
 > 
-> - A C23-compliant compiler (gcc 14+, clang 18+; MSVC doesn't yet fully support C23, but i think it will work)
-> - POSIX thread support, if multithreading; otherwise, compile with `-DNTHREAD`.
+> - A C23-compliant compiler (gcc 14+, clang 18+; maybe through some black magic MSVC)
+> - POSIX thread support, if multithreading; otherwise, compile with `-DNTHREAD` and it should work pretty anywhere.
 > - git
 > - bash, if running the example script. (the example script is relatively simple, and can probably be done in ~1
-command if this is missing)
+command if this is missing) I'm not too sure what version of bash you need, but I think most semi-modern ones work.
 > - Samply, if profiling
 
 ------------------------------------------------------------------------------------------------------------------------
 
 ## **Example Usage**
+
 Run
 
 ```bash
@@ -71,7 +73,8 @@ cd perfhash-fnv1a
 To rehash the example items, and see what compilation calls should look like.
 
 To disable threading, add the `-n` flag. To profile, the `-p` flag (requires samply). To debug, the `-d` flag
-(requires LLVM). Pass in the `-h` flag to view more specific arguments in the example shell script.
+(requires LLVM). To set the c compiler, pass it in after the `-c` flag. Pass in the `-h` flag to view more specific
+arguments in the example shell script.
 
 ------------------------------------------------------------------------------------------------------------------------
 
